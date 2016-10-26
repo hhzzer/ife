@@ -1,0 +1,88 @@
+header {
+    position: relative;
+    padding-left: 0px;
+    background: black;
+    height: 60px;
+}
+
+header img {
+    height: 50px;
+    padding-left: 20px;
+    padding-top: 5px;
+}
+
+header ul {
+    float: right;
+}
+
+header ul li {
+    color: white;
+    display: inline-block;
+}
+
+header ul li a:hover {
+    background: #474747;
+    border-radius: 3px;
+}
+
+
+/*主体部分*/
+
+main {
+    background: gray;
+}
+
+article {
+    display: block;
+    background: white;
+    margin: 15px;
+    box-shadow: 1px 1px 1px 1px gray;
+}
+
+article h1 {
+    padding-top: 20px;
+    padding-left: 10px;
+}
+
+article h2,
+span {
+    padding-left: 10px;
+    color: gray;
+}
+
+article p {
+    padding-left: 10px;
+    text-indent: 2em;
+    padding-bottom: 25px;
+}
+
+article ul {
+    padding-bottom: 20px;
+}
+
+article ul li {
+    list-style-type: none;
+}
+
+article dd{
+    border: solid;
+    width: 160px;
+    
+}
+article dd img{
+	border: solid;
+	margin: 0px;
+}
+article dd span{
+	margin: px;
+
+}
+article dl dd {
+	margin: 10px;
+	width: 160px;
+	text-align: center; 
+}
+
+p {
+    color: green;
+}
