@@ -1,0 +1,15 @@
+header {
+    background: gray;
+    height: 20px;
+    padding: 10px;
+}
+header ul{
+	float: right;
+}
+header ul li{
+	display: inline-block;
+}
+
+p {
+    color: green;
+}
