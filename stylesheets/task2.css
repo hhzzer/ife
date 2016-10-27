@@ -1,3 +1,8 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
 header {
     position: relative;
     padding-left: 0px;
@@ -32,7 +37,8 @@ main {
     background: gray;
 }
 
-article {
+article,
+aside {
     display: block;
     background: white;
     margin: 15px;
@@ -57,32 +63,95 @@ article p {
 }
 
 article ul {
-    padding-bottom: 20px;
+    padding: 30px;
 }
 
 article ul li {
     list-style-type: none;
 }
 
-article dd{
-    border: solid;
-    width: 160px;
-    
-}
-article dd img{
-	border: solid;
-	margin: 0px;
-}
-article dd span{
-	margin: px;
-
-}
-article dl dd {
-	margin: 10px;
-	width: 160px;
-	text-align: center; 
+figure {
+    text-align: center;
+    font-size: 20px;
+    border: 1px;
+    border-style: solid;
+    width: 150px;
+    margin: 30px;
 }
 
-p {
-    color: green;
+figure img {
+    height: 155px;
+    padding: 10px;
 }
+
+figure figcaption {
+    line-height: 25px;
+}
+
+article ol {
+    margin: 50px;
+}
+
+article table {
+    margin: 30px;
+    width: 90%;
+    position: center;
+    padding: 20px;
+}
+
+article table td,
+article table th {
+    border: 1px solid #e6e6e6;
+}
+
+article table th {
+    background: black;
+    color: white;
+}
+
+#table_sum {
+    background: gray;
+}
+
+aside h2 {
+    padding: 10px;
+    margin-top: 30px;
+    margin-left: 20px;
+}
+
+aside form {
+    padding: 15px;
+}
+
+aside form div .tips {
+    float: left;
+    text-align: right;
+    width: 35%;
+    padding-right: 15px;
+}
+
+aside form div p {
+    margin-left: 35%;
+    padding-left: 15px;
+    font-size: 12px;
+    color: #aaa;
+}
+
+aside form button {
+    width: 100%;
+    background: blue;
+    color: white;
+    border-radius: 10px;
+    padding: 5px;
+    margin-top: 15px;
+}
+
+aside form button:hover {
+    background: #0063dc;
+}
+
+
+/* aside form input {
+    padding: 2px;
+}
+ */

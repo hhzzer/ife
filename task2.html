@@ -43,16 +43,14 @@
         </article>
         <article>
             <h1>图片</h1>
-            <dl>
-                <dt>
-                    <dd><span>apple</span><img src="images\apple.png" alt=""></dd>
-                    <dd><span>apple</span><img src="images\apple.png" alt=""></dd>
-                    <dd><span>apple</span><img src="images\apple.png" alt=""></dd>
-                </dt>
-            </dl>
-            <p>好看的图片<img src="images\logo.png" alt=""></p>
-            <p>好看的图片<img src="images\logo.png" alt=""></p>
-            <p>好看的图片<img src="images\logo.png" alt=""></p>
+            <figure>
+                <figcaption>apple</figcaption>
+                <img src="images\apple.png" alt="">
+            </figure>
+            <figure>
+                <figcaption>apple</figcaption>
+                <img src="images\apple.png" alt="">
+            </figure>
         </article>
         <article>
             <h1>最后一篇文章</h1>
@@ -64,7 +62,8 @@
                 <li>排名2</li>
                 <li>排名3</li>
             </ol>
-            <table border="1">
+            <p>下面是一个表格</p>
+            <table>
                 <tr>
                     <th>表头1</th>
                     <th>表头2</th>
@@ -85,7 +84,7 @@
                     <td>32</td>
                     <td>33</td>
                 </tr>
-                <tr>
+                <tr id="table_sum">
                     <td>总计</td>
                     <td colspan="2">2222</td>
                 </tr>
@@ -94,41 +93,57 @@
         <aside>
             <h2>这里是一个侧栏，侧栏标题</h2>
             <form action="submit.php">
-                <label for="email">请输入邮箱地址</label>
+                <div>
+                    <label for="email" class="tips">请输入邮箱地址</label>
+                    <input type="email">
+                    <p>邮箱地址请按格式输入</p>
+                </div>
+                <!--  <div>
+                    <label for="email">请输入邮箱地址</label>
+                </div>
                 <input id="email" type="email">
-                <br><span>邮箱地址请按要求格式输入</span>
-                <br>
-                <label for="passwd1">请输入密码
+                <span>邮箱地址请按要求格式输入</span>
+                <br> -->
+                <div>
+                    <label for="passwd1" class="tips">请输入密码
+                    </label>
                     <input type="password">
-                    <br>
-                </label>
-                <label for="passwd2">请重复输入密码
+                </div>
+                <div>
+                    <label for="passwd2" class="tips">请重复输入密码
+                    </label>
                     <input type="password">
-                    <br>
-                </label>
-                <span>密码要求为6～16位英文字符和数字</span>
-                <br>
-                <label for="sex">性别
+                    <p>密码要求为6～16位英文字符和数字</p>
+                </div>
+                <div>
+                    <label for="sex" class="tips">性别</label>
                     <input type="radio" name="sex">男
-                    <input type="radio" name="sex">女</label>
-                <br><span>城市</span>
-                <select name="city" id="select">
-                    <option value="1">北京</option>
-                    <option value="2">上海</option>
-                    <option value="3">广州</option>
-                </select>
+                    <input type="radio" name="sex">女
+                </div>
                 <br>
-                <label for="hobby">爱好:
+                <div>
+                    <label for="city" class="tips">城市</label>
+                    <select name="city" id="">
+                        <option value="bj">北京</option>
+                        <option value="cq">重庆</option>
+                        <option value="sh">上海</option>
+                    </select>
+                </div>
+                <br>
+                <div>
+                    <label for="hobby" class="tips">爱好:
+                    </label>
                     <input type="checkbox" name="hobby">cat
                     <input type="checkbox" name="hobby">dog
                     <input type="checkbox" name="hobby">fish
                     <input type="checkbox" name="hobby">bird
-                </label>
+                </div>
                 <br>
-                <label for="commet">个人描述:
-                    <textarea name="commet" id="" cols="30" rows="10"></textarea>
-                </label>
-                <br>
+                <div>
+                    <label for="self" class="tips">个人描述</label>
+                    <textarea name="self" id="" cols="30" rows="10"></textarea>
+                </div>
+               
                 <button type="button">确认提交</button>
             </form>
         </aside>
