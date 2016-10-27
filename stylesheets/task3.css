@@ -1,63 +1,39 @@
-body{
-	padding: 20px;
+body {
+    padding: 20px;
+    font-size: 15px;
 }
+
 .main {
-	margin: 0 auto;
-	padding: 20px;
     background: #eee;
-    border: solid 1px #999;
+    margin: 0 auto;
+    border: 1px solid #999;
     overflow: auto;
     min-width: 600px;
-    height: 420px;
-}
-
-.middle {
-    position: absolute;
-    background: white;
-    height: 30px;
-    border: solid 1px #999;
-}
-
-
-#md1 {
-    width: 180px;
-    height: 120px;
-    left: 30px;
-    margin-left: 20px;
-}
-#md1 p {
-    position: absolute;
-    right: 0;
-    padding: 20px 20px 20px 0;
-    font-size: 12px;
-}
-
-#md1 img {
-    position: absolute;
-    width: 80px;
-    height: 80px;
     padding: 20px;
 }
 
-#md2 {
-   padding: 20px;
-   margin-left: 220px;
-   margin-right: 140px;
-   width: 780px;
-   height: 380px;
-   border: 1px solid #999;
-}
-
-#md3 {
-    /*position: absolute;*/
-    width: 120px;
-    height: 420px;
-    right: 30px;
-    margin-right: 20px;
-}
-
-#md3 img {
-    width: 80px;
+.left {
+    background: #fff;
+    border: 1px solid #999;
+    width: 160px;
+    float: left;
+    padding: 20px;
     height: 80px;
-    padding: 20px 20px 0 20px;
+}
+
+.team_logo {
+   position: absolute;
+}
+
+.team_name {
+    float: right;
+    /*width: 100px;*/
+    text-align: right;
+    font-weight: bold;
+    font-size: 13px;
+}
+.right{
+	width: 120px;
+	background: white;
+	padding: 20px;
 }
