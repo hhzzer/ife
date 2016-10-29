@@ -1,36 +1,33 @@
 * {
-    margin: 0;
-    padding: 0;
+    padding: 0px;
+    margin: 0px;
 }
 
-.wripper {
+#box {
     position: absolute;
-    left: 50%;
-    top: 50%;
-    height: 200px;
     width: 400px;
+    height: 200px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
     background: #ccc;
-    margin-top: -100px;
-    margin-left: -200px;
     overflow: hidden;
 }
-
-.left {
-    position: absolute;
-    left: -50px;
-    top: -50px;
-    width: 100px;
-    height: 100px;
-    background: #fc0;
-    border-radius: 50px;
+#box::before,#box::after{
+	content: '';
+	display: block;
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	background-color: #fc0;
 }
-
-.right {
-    position: absolute;
-    width: 50px;
-    height: 50px;
-    background: #fc0;
-    border-radius: 50px 0 0 0;
-    left: 350px;
-    top: 150px;
+#box::before{
+	border-radius: 0 0 100% 0;
+}
+#box::after{
+	right: 0;
+	bottom: 0;
+	border-radius: 100% 0 0 0;
 }
