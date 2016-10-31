@@ -1,0 +1,230 @@
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    
+    body {
+        background: gray;
+    }
+    
+    .main {
+        position: relative;
+        left: 12%;
+        padding: 0 44px;
+        width: 980px;
+        height: 1386px;
+        background: white;
+    }
+    
+    header {
+        position: relative;
+        /* margin-left: 44px;*/
+        height: 61px;
+        /*background: gray;*/
+    }
+    
+    header div {
+        padding-left: 10px;
+        width: 130px;
+        height: 61px;
+        background: #d45d5c;
+    }
+    
+    header div p {
+        position: absolute;
+        bottom: 2px;
+        color: white;
+    }
+    
+    header p#date {
+        position: absolute;
+        bottom: 2px;
+        right: 1px;
+        color: #df8887
+    }
+    
+    .underline_one {
+        border: 2px #928e8c solid;
+    }
+    
+    .section_one {
+        position: relative;
+        padding-top: 34px;
+    }
+    
+    .section_one img {
+        position: relative;
+        width: 641px;
+        height: 301px;
+    }
+    
+    .img_one_l {
+        position: absolute;
+        top: 35px;
+        height: 301px;
+        width: 191px;
+        background: #72A664;
+        opacity: 0.5;
+    }
+    
+    .img_one_r {
+        position: absolute;
+        top: 35px;
+        right: 250px;
+        height: 301px;
+        width: 191px;
+        background: #E1ABC3;
+        opacity: 0.5;
+    }
+    
+    aside {
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding-top: 34px;
+        width: 203px;
+    }
+    
+    aside hr {
+        border: 2px #cc8091 solid;
+    }
+    
+    aside h2 {
+        color: #000000;
+        text-decoration: underline;
+    }
+    
+    aside>p {
+        color: #676767;
+        font-family: 'STKaiti';
+        margin-bottom: 10px;
+    }
+    
+    aside .num {
+        color: #75b86b;
+        font-size: 116px;
+        font-family: 'Microsoft YaHei';
+        position: absolute;
+        top: 120px;
+    }
+    
+    .aside_down {
+        position: relative;
+    }
+    
+    .mark1 {
+        font-size: 55px;
+        color: #cc8091;
+        position: absolute;
+        top: 140px;
+    }
+    
+    .mark2 {
+        position: absolute;
+        top: 160px;
+        right: 80px;
+        font-size: 21px;
+        color: #cc8091;
+    }
+    
+    .mark3 {
+        position: absolute;
+        top: 180px;
+        right: 20px;
+        font-size: 12px;
+        color: #cc8091;
+    }
+    
+    .section2 {
+        margin-top: 16px;
+        width: 641px;
+        height: 287px;
+        position: relative;
+    }
+    
+    .section2 article {
+        display: inline-block;
+        height: 25%;
+    }
+    
+    .section2 article h2 {
+        text-decoration-style: solid;
+        text-decoration-line: underline;
+    }
+    
+    .section2 article:first-child {
+        position: absolute;
+        width: 36%;
+    }
+    
+    .section2 article:first-child h2 {
+        color: #418c59;
+    }
+    
+    .section2 article.when {
+        position: absolute;
+        width: 27%;
+        margin-left: 40%;
+    }
+    
+    .section2 article.when h2{
+    	color: #d2994f;
+    }
+    .section2 article:last-child {
+        position: absolute;
+        width: 27%;
+        margin-left: 70%;
+    }
+    .section2 article:last-child h2{
+    	color: #cc7680;
+    }
+    .section3 {
+        position: absolute;
+        width: 892px;
+        height: 30%;
+    }
+    
+    .section3 article {
+        position: absolute;
+        /*   margin-left: 20px;*/
+        width: 50%;
+    }
+    
+    .section3 article:first-child img {
+        /*float: right;*/
+        width: 30%;
+    }
+    
+    .section3 article:last-child {
+        left: 50%;
+    }
+    
+    .section3 article:last-child div img {
+        position: absolute;
+        width: 80%;
+        left: 10%;
+        height: 200px;
+    }
+    
+    .section3 article:last-child p {
+        position: absolute;
+        left: 10%;
+        top: 240px;
+    }
+    
+    footer {
+        position: absolute;
+        bottom: 58px;
+    }
+    
+    footer hr {
+        width: 892px;
+    }
+    
+    footer div {
+        position: absolute;
+        margin-top: 2px;
+        right: 0;
+        color: #df8887;
+    }
