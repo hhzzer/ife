@@ -10,7 +10,7 @@ body {
 .main {
     position: absolute;
     width: 1280px;
-    left: 1.4%;
+    left: 1%;
 }
 
 header {
@@ -63,9 +63,11 @@ nav ul>li {
 nav ul>li a {
     text-decoration-line: none;
 }
+
 nav ul>li a:visited {
     color: #787b83;
 }
+
 nav ul>li a:hover {
     color: #e74f4d;
 }
@@ -89,7 +91,6 @@ nav ul>li:hover {
 .login p {
     display: inline-block;
     font-size: 14px;
-
 }
 
 .login p a {
@@ -99,4 +100,97 @@ nav ul>li:hover {
 
 .login p a:hover {
     color: #e74f4d;
+}
+
+.l1 {
+    position: relative;
+    background-image: url("/img/main.png");
+    height: 854px;
+}
+
+.l1 p:first-child {
+    position: absolute;
+    top: 230px;
+    left: 120px;
+    height: 50px;
+    width: 454px;
+    font-size: 46px;
+    font-family: arial;
+    text-transform: full-width;
+    /*font-weight: 400;*/
+    color: white;
+    /* text-align: center;*/
+    /*background: gray;*/
+}
+
+.l1 p:nth-child(2) {
+    position: absolute;
+    top: 310px;
+    left: 120px;
+    height: 53px;
+    width: 293px;
+    font-size: 18px;
+    color: white;
+    /* background: gray;*/
+}
+
+.l1 p:last-child {
+    position: absolute;
+    box-sizing: border-box;
+    padding-top: 9px;
+    top: 430px;
+    left: 120px;
+    height: 65px;
+    width: 311px;
+    font-size: 29px;
+    text-align: center;
+    color: white;
+    background: #e74f4d;
+}
+
+.l2 {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    height: 250px;
+    width: 1280px;
+    overflow: hidden;
+}
+
+.l2 div {
+    display: inline-block;
+    height: 250px;
+    width: 310px;
+
+    /*background: gray;*/
+}
+.l2 div:nth-child(1){
+    position: absolute;
+    top: 0px;
+}
+.l2 div:nth-child(2){
+    position: absolute;
+    top: 0px;
+    left: 310px;
+}
+.l2 div:nth-child(3){
+    position: absolute;
+    top: 0px;
+    left: 620px;
+}
+.l2 div:nth-child(4){
+    position: absolute;
+    top: 0px;
+    left: 930px;
+}
+
+.l2 div img {
+    position: absolute;
+    left: 130px;
+    top: 47px;
+}
+.l2 div>div{
+    position: absolute;
+    /*left: 30px;*/
+    top: 47px;
 }
