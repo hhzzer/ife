@@ -154,34 +154,79 @@ nav ul>li:hover {
     padding: 0;
     height: 250px;
     width: 1280px;
-    overflow: hidden;
+    /*overflow: hidden;*/
 }
 
 .l2 div {
     display: inline-block;
     height: 250px;
     width: 310px;
-
     /*background: gray;*/
 }
-.l2 div:nth-child(1){
+
+.l2 div div {
+    /*background: gray;*/
+    box-sizing: border-box;
+    height: 50px;
+    width: 310px;
+    padding: 0 78px;
+    /*border-right: solid 1px;*/
+}
+
+.l21 div p {
+    font-size: 13px;
+    line-height: 16px;
+    text-align: center;
+    color:#767777
+}
+
+.l2 div:nth-child(1) {
     position: absolute;
     top: 0px;
 }
-.l2 div:nth-child(2){
+
+
+
+.l2 div:nth-child(2) {
     position: absolute;
     top: 0px;
     left: 310px;
 }
-.l2 div:nth-child(3){
+
+.l2 div:nth-child(3) {
     position: absolute;
     top: 0px;
     left: 620px;
 }
-.l2 div:nth-child(4){
+
+.l2 div:nth-child(4) {
     position: absolute;
     top: 0px;
     left: 930px;
+}
+.l2 div:nth-child(1) div {
+    position: absolute;
+    left: 2px;
+    top: 135px;
+    border-right: solid 2px #767677;
+}
+.l2 div:nth-child(2) div {
+    position: absolute;
+    left: 2px;
+    top: 135px;
+    border-right: solid 2px #767677;
+}
+.l2 div:nth-child(3) div {
+    position: absolute;
+    left: 2px;
+    top: 135px;
+    border-right: solid 2px #767677;
+}
+.l2 div:nth-child(4) div {
+    position: absolute;
+    left: 2px;
+    top: 135px;
+    border-right: none;
 }
 
 .l2 div img {
@@ -189,8 +234,127 @@ nav ul>li:hover {
     left: 130px;
     top: 47px;
 }
-.l2 div>div{
+.l3{
+    position: relative;
+    height: 361px;
+    background: #edecec;
+}
+.l3 img{
+    position: relative;
+    top: 90px;
+    left:594px;
+    background: #8f8f8f
+    
+    
+}
+.l3 p{
     position: absolute;
-    /*left: 30px;*/
-    top: 47px;
+    top: 230px;
+    left: 210px;
+    height: 53px;
+    width: 826px;
+    font-size: 53px;
+    color: #8f8f8f
+}
+.l5{
+    position: relative;
+    background: #f7f7f7;
+    height: 631px;
+}
+.l5 img{
+    position: absolute;
+    top: 138px;
+    left: 156px;
+    z-index: 4;
+}
+.l5 .text{
+    position: absolute;
+    top: 130px;
+    left: 200px;
+    width: 880px;
+    height: 385px;
+    z-index: 5;
+    /* background: gray;
+     opacity: 0.2; */
+}
+.l5 .l5-p{
+    position: absolute;
+    box-sizing: border-box;
+    height: 337px;
+    width: 219px;
+    background: white;
+    z-index: 3;
+}
+#l5-1{
+    position: absolute;
+    left:147px;
+    top: 129px;
+    z-index: 4;
+    background: white;
+    opacity: 0.2;
+}
+#l5-2{
+    position: absolute;
+    left:406px;
+    top: 178px;
+    z-index: 4;
+    background: white;
+    opacity: 0.3;
+}
+#l5-3{
+    position: absolute;
+    left:658px;
+    top: 129px;
+    z-index: 4;
+    background: white;
+    opacity: 0.3;
+}
+#l5-4{
+    position: absolute;
+    left:915px;
+    top: 129px;
+    z-index: 4;
+    background: white;
+    opacity: 0.1;
+}
+#l5-1 div,#l5-2 div,#l5-3 div,#l5-4 div{
+    height: 334px;
+    width: 215px;
+    
+    z-index: 5;
+}
+.l5 .text>div{
+    width: 130px;
+    height: 50px;
+    font-size: 14px;
+    text-align: center;
+}
+.l5 .text .bj{
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    text-align: center;
+}
+.l5 .text .sh{
+    position: absolute;
+    width: 235px;
+    left: 205px;
+    top: 0px;
+}
+.l5 .text .sh h4{
+    font-size: 20px;
+    letter-spacing: 1.7em;
+    /*text-align: justify;*/
+
+}
+.l5 .text .sz{
+    position: absolute;
+    left: 480px;
+    bottom: 0px;
+}
+.l5 .text .xg{
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    text-align: center;
 }
