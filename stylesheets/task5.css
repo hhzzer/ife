@@ -1,0 +1,87 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    /*display: block;*/
+    position: relative;
+    height: 90px;
+    background: black;
+}
+
+header img {
+    width: 80px;
+    height: 80px;
+}
+
+header nav {
+    float: right;
+}
+
+header ul li {
+    color: white;
+    display: inline-block;
+}
+
+aside {
+    float: right;
+    padding: 5px;
+    background: white;
+    width: 200px;
+}
+
+main {
+    background: gray;
+    padding-top: 10px;
+    padding-bottom: 1px;
+}
+
+main article {
+    margin-right: 220px;
+    margin-top: 0px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    padding: 0px 10px 10px 10px;
+    background: white;
+}
+
+#tupian img {
+    display: block;
+    width: 80px;
+    height: 80px;
+}
+
+#tupian figure {
+    display: inline-block;
+}
+
+article ul li {
+    list-style-type: none;
+}
+
+table {
+    width: 90%;
+}
+
+table tr:first-child {
+    color: white;
+    background: black;
+}
+
+table tr:last-child {
+    background: gray;
+}
+
+article table td,
+article table th {
+    border: 1px solid #e6e6e6;
+}
+
+footer {
+    background: black;
+}
+
+h1 {
+    background: #fff
+}
