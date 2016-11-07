@@ -177,15 +177,13 @@ nav ul>li:hover {
     font-size: 13px;
     line-height: 16px;
     text-align: center;
-    color:#767777
+    color: #767777
 }
 
 .l2 div:nth-child(1) {
     position: absolute;
     top: 0px;
 }
-
-
 
 .l2 div:nth-child(2) {
     position: absolute;
@@ -204,24 +202,28 @@ nav ul>li:hover {
     top: 0px;
     left: 930px;
 }
+
 .l2 div:nth-child(1) div {
     position: absolute;
     left: 2px;
     top: 135px;
     border-right: solid 2px #767677;
 }
+
 .l2 div:nth-child(2) div {
     position: absolute;
     left: 2px;
     top: 135px;
     border-right: solid 2px #767677;
 }
+
 .l2 div:nth-child(3) div {
     position: absolute;
     left: 2px;
     top: 135px;
     border-right: solid 2px #767677;
 }
+
 .l2 div:nth-child(4) div {
     position: absolute;
     left: 2px;
@@ -234,20 +236,21 @@ nav ul>li:hover {
     left: 130px;
     top: 47px;
 }
-.l3{
+
+.l3 {
     position: relative;
     height: 361px;
     background: #edecec;
 }
-.l3 img{
+
+.l3 img {
     position: relative;
     top: 90px;
-    left:594px;
+    left: 594px;
     background: #8f8f8f
-    
-    
 }
-.l3 p{
+
+.l3 p {
     position: absolute;
     top: 230px;
     left: 210px;
@@ -256,18 +259,104 @@ nav ul>li:hover {
     font-size: 53px;
     color: #8f8f8f
 }
-.l5{
+
+.l4 {
+    position: relative;
+    background-image: url("img/4-1.png");
+    height: 341px;
+    opacity: 1;
+    z-index: 2;
+}
+
+.l4-1 {
+    position: relative;
+    background-color: #aa3432;
+    height: 341px;
+    opacity: 0.2;
+    z-index: 0;
+}
+
+.l4-p1 {
+    position: absolute;
+    top: 53px;
+    left: 498px;
+    width: 235px;
+    height: 27px;
+    font-size: 21px;
+    color: #ffffff;
+    /* z-index: 2;
+    background: gray;
+    opacity: 1;
+     */
+}
+
+.l4 hr {
+    position: absolute;
+    top: 94px;
+    left: 600px;
+    width: 28px;
+    color: #ffffff;
+}
+
+.l4-p2 {
+    position: absolute;
+    top: 103px;
+    right: 451px;
+    color: #ffffff;
+}
+
+.l4 select:first-child {
+    position: absolute;
+    top: 173px;
+    left: 126px;
+    width: 235px;
+    height: 35px;
+    background: white;
+}
+
+.l4 select:nth-child(2) {
+    position: absolute;
+    top: 173px;
+    left: 392px;
+    width: 235px;
+    height: 35px;
+    background: white;
+}
+
+.l4 select:nth-child(3) {
+    position: absolute;
+    top: 173px;
+    left: 657px;
+    width: 235px;
+    height: 35px;
+    background: white;
+}
+
+.l4 form input {
+    position: absolute;
+    top: 173px;
+    right: 126px;
+    width: 235px;
+    height: 35px;
+    background: #aa3432
+    text-fill-color:white;
+}
+
+.l5 {
     position: relative;
     background: #f7f7f7;
     height: 631px;
+    color: white;
 }
-.l5 img{
+
+.l5 img {
     position: absolute;
     top: 138px;
     left: 156px;
     z-index: 4;
 }
-.l5 .text{
+
+.l5 .text {
     position: absolute;
     top: 130px;
     left: 200px;
@@ -277,7 +366,8 @@ nav ul>li:hover {
     /* background: gray;
      opacity: 0.2; */
 }
-.l5 .l5-p{
+
+.l5 .l5-p {
     position: absolute;
     box-sizing: border-box;
     height: 337px;
@@ -285,76 +375,138 @@ nav ul>li:hover {
     background: white;
     z-index: 3;
 }
-#l5-1{
+
+#l5-1 {
     position: absolute;
-    left:147px;
+    left: 147px;
     top: 129px;
     z-index: 4;
     background: white;
     opacity: 0.2;
 }
-#l5-2{
+
+#l5-2 {
     position: absolute;
-    left:406px;
+    left: 406px;
     top: 178px;
     z-index: 4;
     background: white;
     opacity: 0.3;
 }
-#l5-3{
+
+#l5-3 {
     position: absolute;
-    left:658px;
+    left: 658px;
     top: 129px;
     z-index: 4;
     background: white;
     opacity: 0.3;
 }
-#l5-4{
+
+#l5-4 {
     position: absolute;
-    left:915px;
+    left: 915px;
     top: 129px;
     z-index: 4;
     background: white;
     opacity: 0.1;
 }
-#l5-1 div,#l5-2 div,#l5-3 div,#l5-4 div{
+
+#l5-1 div,
+#l5-2 div,
+#l5-3 div,
+#l5-4 div {
     height: 334px;
     width: 215px;
-    
     z-index: 5;
 }
-.l5 .text>div{
+
+.l5 .text>div {
     width: 130px;
     height: 50px;
     font-size: 14px;
+    color: black;
     text-align: center;
 }
-.l5 .text .bj{
+
+.l5 .text .bj {
     position: absolute;
     left: 0px;
     bottom: 0px;
     text-align: center;
 }
-.l5 .text .sh{
+
+.l5 .text .sh {
     position: absolute;
     width: 235px;
     left: 205px;
     top: 0px;
 }
-.l5 .text .sh h4{
+
+.l5 .text .sh h4 {
     font-size: 20px;
     letter-spacing: 1.7em;
     /*text-align: justify;*/
-
 }
-.l5 .text .sz{
+
+.l5 .text .sz {
     position: absolute;
     left: 480px;
     bottom: 0px;
 }
-.l5 .text .xg{
+
+.l5 .text .xg {
     position: absolute;
     right: 0px;
     bottom: 0px;
     text-align: center;
+}
+.l6{
+    position: relative;
+}
+.l6 .img{
+    position: relative;
+    display: inline-block;
+    background: url("img/6-1.png");
+    height: 567px;
+    width: 850px;
+}
+.l6 .img p:first-child{
+    position: absolute;
+    top: 134px;
+    left: 340px;
+    width: 147px;
+    height: 48px;
+    color: white;
+    font-size: 46px;
+}
+.l6 .img p:nth-child(2){
+    position: absolute;
+    top: 165px;
+    left: 240px;
+    width: 368px;
+    height: 119px;
+    color: white;
+    font-size: 110px;
+    font-family: arial;
+}
+.l6 .img p:last-child{
+    position: absolute;
+    top: 284px;
+    left: 340px;
+    width: 154px;
+    height: 62px;
+    color: white;
+    font-size: 22px;
+    line-height: 34px
+}
+
+.l6 .text{
+     display: inline-block;
+     position: absolute;
+     top: 0px;
+     right: 0px;
+     height: 567px;
+     width: 431px;
+     font-family: arial;
 }
