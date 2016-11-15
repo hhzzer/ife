@@ -1,0 +1,50 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+div{
+	display: inline-block;
+	/*box-sizing: border-box;*/
+	height: 50px;
+	margin:20px 0 0 20px;
+	border: solid #999 1px;
+	background: #eee;
+}
+
+@media screen and (min-width:768px) {
+	div{background: red;}
+	.d1,.d2,.d3{
+		width: 31%;
+	}
+	.d4,.d6{
+		width: 24%;
+	}
+	.d5,.d11{
+		width: 45%;
+	}
+	.d7,.d8{
+		width: 7%;
+	}
+	.d9,.d10{
+		width: 15%;
+	}
+
+}
+@media screen and (max-width:768px) {
+	div{background: gray;}
+	.d1,.d2,.d5{
+		width: 45%;
+	}
+	.d3{
+		width: 90%;
+	}
+	.d4,.d6,.d10,.d11{
+		width: 24%;
+	}
+	.d7,.d8{
+		width: 15%;
+	}
+	.d9{
+		width: 62%;
+	}
+}
