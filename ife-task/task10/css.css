@@ -1,0 +1,72 @@
+*{
+	margin:0;
+	padding: 0;
+}
+div[class*="num"] {
+    width: 150px;
+}
+
+@media (min-width: 640px) {
+    .wrapper {
+        display: flex;
+        flex-direction: row;
+        /* flex-wrap: wrap;*/
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+        background-color: gray;
+    }
+    .num1 {
+        height: 120px;
+        border: 1px solid red;
+    }
+    .num2 {
+        height: 100px;
+        border: 1px solid red;
+    }
+    .num3 {
+        /*float: left;*/
+        /*align-self: flex-end;*/
+        height: 40px;
+        border: 1px solid red;
+    }
+    .num4 {
+        align-self: flex-start;
+        height: 200px;
+        border: 1px solid blue;
+    }
+}
+
+@media (max-width: 640px) {
+    .wrapper {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 20px;
+    }
+    .num1 {
+        order: 2;
+        height: 120px;
+        border: 1px solid red;
+    }
+    .num2 {
+        order: 3;
+        height: 100px;
+        border: 1px solid red;
+    }
+    .num3 {
+        /*float: left;*/
+        /*align-self: flex-end;*/
+        order: 4;
+        height: 40px;
+        border: 1px solid red;
+    }
+    .num4 {
+        align-self: flex-start;
+        order: 1;
+        height: 200px;
+        border: 1px solid blue;
+        margin-bottom: 20px;
+    }
+}
