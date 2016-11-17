@@ -7,11 +7,6 @@ html, body {
   width: 100%;
   padding: 10px; }
 
-.wrapper:before, .wrapper:after {
-  content: "";
-  display: table;
-  clear: both; }
-
 .outer {
   box-sizing: border-box;
   float: left;

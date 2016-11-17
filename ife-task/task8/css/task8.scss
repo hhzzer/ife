@@ -52,7 +52,7 @@ html,body{
 	padding:10px;
 }
 .wrapper:before,.wrapper:after{
-	@include clearFix;
+	// @include clearFix;
 }
 .outer{
 	@include outerStyle;
