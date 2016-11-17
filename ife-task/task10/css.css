@@ -4,6 +4,7 @@
 }
 div[class*="num"] {
     width: 150px;
+    margin-bottom: 20px;
 }
 
 @media (min-width: 640px) {
@@ -67,6 +68,6 @@ div[class*="num"] {
         order: 1;
         height: 200px;
         border: 1px solid blue;
-        margin-bottom: 20px;
+        
     }
 }
