@@ -1,0 +1,21 @@
+td {
+    height: 20px;
+    width: 100px;
+    color:
+}
+
+table tr th {
+    color: white;
+}
+
+table tr:nth-of-type(odd) {
+    background-color: gray;
+}
+
+table tr:first-child {
+    background-color: black;
+}
+
+input:focus {
+    width: 410px;
+}
