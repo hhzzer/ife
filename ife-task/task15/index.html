@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>IFE JavaScript Task 15</title>
+</head>
+
+<body>
+    <ul id="source">
+        <li>北京空气质量：<b>90</b></li>
+        <li>上海空气质量：<b>70</b></li>
+        <li>天津空气质量：<b>80</b></li>
+        <li>广州空气质量：<b>50</b></li>
+        <li>深圳空气质量：<b>40</b></li>
+        <li>福州空气质量：<b>32</b></li>
+        <li>成都空气质量：<b>90</b></li>
+    </ul>
+    <ul id="recort"></ul>
+    <button id="sort-btn" onclick="init()">排序</button>
+    <!--script type="text/javascript">
+    	function getData() {
+    		console.log(Date());
+    	}
+    </script!-->
+    <script type="text/javascript">
+    function getData() {
+        var data = [];
+        var ul = document.getElementById('source');
+        for (var i = 0; i < ul.childElementCount; i++) {
+
+            var li = ul.children[i];
+            var strCity = li.innerHTML.split("空气质量：")[0];
+            var num = Number(li.children[0].innerHTML);
+            data.push([strCity, num]);
+        }
+        /*
+         for (var i = 0 i < ul.childElementCount; i++) {
+             var li = ul.children[i];
+             var strCity = li.innerHTML.split("空气质量：")[0];
+             var num = Number(li.children[0].innerHTML);
+             data.push([strCity,num]);
+         }*/
+
+        return data;
+    }
+    function compare(value1,value2) {
+    	return value2[2]-value1[2];
+    }
+   var SortData = getData();
+   var Sor1=SortData.sort(compare);
+   function init() {
+   		 console.log(Sor1);
+   }
+ 
+    </script>
+</body>
+
+</html>
