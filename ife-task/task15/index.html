@@ -17,12 +17,8 @@
         <li>成都空气质量：<b>90</b></li>
     </ul>
     <ul id="recort"></ul>
-    <button id="sort-btn" onclick="init()">排序</button>
-    <!--script type="text/javascript">
-    	function getData() {
-    		console.log(Date());
-    	}
-    </script!-->
+    <button id="sort-btn">排序</button>
+    <ul id="result"></ul>
     <script type="text/javascript">
     function getData() {
         var data = [];
@@ -34,25 +30,37 @@
             var num = Number(li.children[0].innerHTML);
             data.push([strCity, num]);
         }
-        /*
-         for (var i = 0 i < ul.childElementCount; i++) {
-             var li = ul.children[i];
-             var strCity = li.innerHTML.split("空气质量：")[0];
-             var num = Number(li.children[0].innerHTML);
-             data.push([strCity,num]);
-         }*/
 
         return data;
+        //alert(data);
     }
-    function compare(value1,value2) {
-    	return value2[2]-value1[2];
+
+    function compare(value1, value2) {
+        return value2[1] - value1[1];
     }
-   var SortData = getData();
-   var Sor1=SortData.sort(compare);
-   function init() {
-   		 console.log(Sor1);
-   }
- 
+
+    function viewResult() {
+        var data = getData();
+        var data_px = data.sort(compare);
+        var order = ["第一名：", "第二名：", "第三名：", "第四名：", "第五名：", "第六名：", "第七名："];
+        for (var i = 0; i < data_px.length; i++) {
+
+            var para = document.createElement("li");
+            var text = document.createTextNode(order[i] + data_px[i][0] + ",  空气质量：" + data_px[i][1]);
+            para.appendChild(text);
+            var textdiv = document.getElementById("result");
+            textdiv.appendChild(para);
+        }
+
+        //alert(data_px);
+    }
+
+    function init() {
+        var btn = document.getElementById("sort-btn");
+        btn.onclick = viewResult;
+    }
+
+    init();
     </script>
 </body>
 
