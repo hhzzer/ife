@@ -2,9 +2,27 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<link rel="stylesheet" href="task17.css">
 	<title>IFE Task 17</title>
 </head>
 <body>
+	<fieldset>
+		<legend>请选择日期粒度：</legend>
+		<label for="">日<input name="gra-time" type="radio" value="day" checked="checked"></label>
+		<label for="">周<input name="gra-time" type="radio" value="week"></label>
+		<label for="">月<input name="gra-time" type="radio" value="month"></label>
+	</fieldset>
+	<fieldset>
+		<legend><select name="" id="city-select">
+				<option value="">北京</option>
+				<option value="">上海</option>
+				<option value="">重庆</option>
+				<option value="">深圳</option>
+				<option value="">武汉</option>
+				<option value="">昆明</option>
+			</select></legend>
+	</fieldset>
+	<div id="aqi-chart-wrap"></div>
 	<script src="task17.js"></script>
 </body>
 </html>
