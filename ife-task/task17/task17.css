@@ -1,14 +1,16 @@
 #aqi-chart-wrap{
-	position: absolute;
+	position: relative;
 	margin: 50px 0 0 100px;
-	height: 300px;
-	width: 800px;
+	padding-left: 20px;
+	/*padding-bottom: 2px;*/
+	height: auto;
+	width: 1100px;
 	background-color: gray;
 }
 .aqi-num{
 	position: relative;
 	display: inline-block;
-	/*bottom: 0;*/
-	margin: 10px 10px 0 10px ;
+	bottom: 0px;
+	margin: 1px 1px 0 1px ;
 	background-color:white;
 }
