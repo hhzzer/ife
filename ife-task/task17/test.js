@@ -1,14 +1,3 @@
-/*var aqiSourceData = {
-    "北京": {
-        "2016-01-01": 10,
-        "2016-01-02": 10,
-        "2016-01-03": 10,
-        "2016-01-04": 100
-    }
-};*/
-
-
-//一下两个函数用于随机模拟生成测试数据
 function getDateStr(dat) {
     var y = dat.getFullYear();
     var m = dat.getMonth() + 1;
@@ -22,7 +11,7 @@ function randomBuildData(seed) {
     var returnData = {};
     var dat = new Date("2016-01-01");
     var datStr = '';
-    for (var i = 1; i < 50; i++) {
+    for (var i = 1; i < 30; i++) {
         datStr = getDateStr(dat);
         returnData[datStr] = Math.ceil(Math.random() * seed);
         dat.setDate(dat.getDate() + 1);
@@ -48,8 +37,6 @@ function removeChildren(pnode) {
     }
 }
 
-
-
 function createWripeData(pageStatus) {
 
     var orignData = aqiSourceData[pageStatus.city];
@@ -64,7 +51,8 @@ function createWripeData(pageStatus) {
         for (var item in orignData) {
             countSum = countSum + orignData[item];
             daySum++;
-            if ((new Date(item)).getDay() == 6) {
+            var xinqi = new Date(item).getDay();
+            if (xinqi == 6) {
                 week++;
                 wripeData["第" + week + "周"] = Math.floor(countSum / daySum);
                 countSum = 0;
@@ -95,28 +83,27 @@ function createWripeData(pageStatus) {
             wripeData["第" + month + "月"] = Math.floor(countSum / daySum);
         }
     }
-
     return wripeData;
 }
 
 
-function randerChart(wripeData) {
+/*function randerChart(wripeData) {
     var divNum = Object.getOwnPropertyNames(wripeData).length;
-    //var aqiChartWrap = {};
+    var aqiChartWrap = {};
     var aqiChartWrap = document.getElementById('aqi-chart-wrap');
-    removeChildren(aqiChartWrap);
+    //removeChildren(aqiChartWrap);
     for (var item in wripeData) {
         var cube = [];
         cube[item] = document.createElement("div");
         cube[item].setAttribute("class", "aqi-num");
-        cube[item].setAttribute("style", "height:" + wripeData[item] + "px;width:" + 800 / divNum + "px;");
-        cube[item].setAttribute("title", item + ":" + wripeData[item]);
+        cube[item].setAttribute("style", "height:" + cubl[item] + "px;width:" + 800 / divNum + "px;");
+        cube[item].setAttribute("title", item + ":" + cubl[item]);
         //cube[item].setAttribute("onmouseover", "alert(1);");
 
         aqiChartWrap.appendChild(cube[item]);
     }
     return console.log(aqiChartWrap);
-}
+}*/
 var pageStatus = {
     city: "北京",
     size: "week"
@@ -124,13 +111,9 @@ var pageStatus = {
 
 function init() {
     var wripeData = createWripeData(pageStatus);
-    randerChart(wripeData);
-    console.log(Object.getOwnPropertyNames(wripeData).length);
+    console.log(wripeData);
 
 }
 
-
-window.onload = function() {
-
-    init();
-}
+init();
+//createWripeData(pageStatus);
