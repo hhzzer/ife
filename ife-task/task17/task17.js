@@ -7,8 +7,7 @@
     }
 };*/
 
-
-//一下两个函数用于随机模拟生成测试数据
+//以下两个函数用于随机模拟生成测试数据
 function getDateStr(dat) {
     var y = dat.getFullYear();
     var m = dat.getMonth() + 1;
@@ -29,6 +28,7 @@ function randomBuildData(seed) {
     }
     return returnData;
 }
+// 生成原始数据
 var aqiSourceData = {
     "北京": randomBuildData(500),
     "上海": randomBuildData(300),
@@ -47,9 +47,12 @@ function removeChildren(pnode) {
         pnode.removeChild(childs.item(i));
     }
 }
-
-
-
+// 定义页面状态，作为绘制柱状图函数参数
+var pageStatus = {
+    city: "北京",
+    size: "day"
+};
+// 处理原始数据，根据页面状态生成“日”，“周”，“月”数据
 function createWripeData(pageStatus) {
 
     var orignData = aqiSourceData[pageStatus.city];
@@ -99,38 +102,69 @@ function createWripeData(pageStatus) {
     return wripeData;
 }
 
-
+//根据绘图数据，绘制柱状图
 function randerChart(wripeData) {
     var divNum = Object.getOwnPropertyNames(wripeData).length;
-    //var aqiChartWrap = {};
     var aqiChartWrap = document.getElementById('aqi-chart-wrap');
     removeChildren(aqiChartWrap);
     for (var item in wripeData) {
         var cube = [];
         cube[item] = document.createElement("div");
         cube[item].setAttribute("class", "aqi-num");
-        cube[item].setAttribute("style", "height:" + wripeData[item] + "px;width:" + 800 / divNum + "px;");
+        cube[item].setAttribute("style", "height:" + wripeData[item]*0.8 + "px;width:" + 1000 / divNum + "px;");
         cube[item].setAttribute("title", item + ":" + wripeData[item]);
         //cube[item].setAttribute("onmouseover", "alert(1);");
 
         aqiChartWrap.appendChild(cube[item]);
     }
-    return console.log(aqiChartWrap);
+    //return console.log(aqiChartWrap);
 }
-var pageStatus = {
-    city: "北京",
-    size: "week"
-};
+//给radio元素和select元素绑定onchange事件函数
+function bandEvent() {
+    var radio = document.getElementsByName("gra-time");
+    //var select = document.getElementsByTagName("option");
+    var city = document.getElementById("city-select");
+    city.setAttribute("onchange", "cityChange(this.value);");
+    for (var i = 0; i < radio.length; i++) {
+        radio[i].setAttribute("onchange", "radioChange(this.value);");
+    }
+}
+// 城市选项框onchange函数
+function cityChange(city) {
+    pageStatus.city = city;
+    //console.log(pageStatus);
+    init();
+}
+// radio function
+function radioChange(time) {
+    pageStatus.size = time;
+    init();
+}
+// 根据源数据，生成下拉框选项
+function createSelect() {
+    var select = document.getElementById("city-select");
+    //var option = aqiSourceData;
+    for (var item in aqiSourceData) {
+        var option = [];
+        option[item] = document.createElement("option");
+        option[item].setAttribute("value", item);
+        option[item].innerHTML = item;
+        select.appendChild(option[item]);
+        //console.log(item);
+    }
+}
 
 function init() {
     var wripeData = createWripeData(pageStatus);
     randerChart(wripeData);
-    console.log(Object.getOwnPropertyNames(wripeData).length);
+    //console.log(Object.getOwnPropertyNames(wripeData).length);
 
 }
 
 
 window.onload = function() {
-
+    createSelect();
+    bandEvent();
     init();
+
 }
