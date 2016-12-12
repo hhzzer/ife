@@ -1,5 +1,9 @@
 var queueSource = [];
 
+function $(el) {
+    return document.querySelector(el);
+}
+
 function removeChildren(pnode) {
     var childs = pnode.childNodes;
     for (var i = childs.length - 1; i >= 0; i--) {
@@ -18,14 +22,33 @@ function randomArray(num) {
     return array;
 }
 
-function sleep(n) {
-    var start = new Date().getTime();
-    while (true)
-        if (new Date().getTime() - start > n) break;
+function delay(fn, t) {
+    var queue = [],
+        self, timer;
+
+    function schedule(fn, t) {
+        timer = setTimeout(function() {
+            timer = null;
+            fn();
+            if (queue.length) {
+                var next = queue.shift();
+                schedule(next.fn, next.t);
+            }
+        }, t);
+    }
+}
+
+function randomFifty() {
+    queueSource = randomArray(50);
+    createQueue(queueSource);
 }
 
 function maopao(array) {
     var i, j, tmp;
+
+
+
+    // body...
     for (var i = 0; i < array.length; i++) {
         for (var j = i + 1; j < array.length; j++) {
             console.log("  i=" + i + ";j=" + j)
@@ -34,15 +57,15 @@ function maopao(array) {
                 array[j] = array[i];
                 array[i] = tmp;
                 console.log(array + "  change");
-                createQueue(array);
-                sleep(100);
+
+
             } else {
                 console.log(array + " no change");
-                createQueue(array);
-                sleep(100);
-            }
 
+            }
+            createQueue(array);
         }
+
 
     }
 
@@ -122,6 +145,7 @@ function bandEvent() {
     right_out.setAttribute("onclick", "rightOut();");
     var sort_bottom = document.getElementById("sort");
     sort_bottom.setAttribute("onclick", "maopao(queueSource);");
+    $("#random").setAttribute("onclick", "randomFifty();");
 }
 
 function sortArray() {
