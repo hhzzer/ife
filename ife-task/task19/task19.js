@@ -22,55 +22,48 @@ function randomArray(num) {
     return array;
 }
 
-function delay(fn, t) {
-    var queue = [],
-        self, timer;
 
-    function schedule(fn, t) {
-        timer = setTimeout(function() {
-            timer = null;
-            fn();
-            if (queue.length) {
-                var next = queue.shift();
-                schedule(next.fn, next.t);
-            }
-        }, t);
-    }
+function sleep(time) {
+    return new Promise((resolve) => setTimeout(resolve, time));
 }
+
 
 function randomFifty() {
     queueSource = randomArray(50);
     createQueue(queueSource);
 }
 
-function maopao(array) {
-    var i, j, tmp;
+function maopao(data) {
+    var i = 0,
+        j = 1,
+        temp;
+    len = data.length;
+    timer = null;
+    timer = setInterval(run, 250);
 
-
-
-    // body...
-    for (var i = 0; i < array.length; i++) {
-        for (var j = i + 1; j < array.length; j++) {
-            console.log("  i=" + i + ";j=" + j)
-            if (array[i] > array[j]) {
-                tmp = array[j];
-                array[j] = array[i];
-                array[i] = tmp;
-                console.log(array + "  change");
-
-
+    function run() {
+        if (i < len) {
+            if (j < len) {
+                if (data[i] > data[j]) {
+                    temp = data[i];
+                    data[i] = data[j];
+                    data[j] = temp;
+                    console.log(data);
+                    //updata();
+                    createQueue(data);
+                }
+                j++;
             } else {
-                console.log(array + " no change");
-
+                i++;
+                j = i + 1;
             }
-            createQueue(array);
+        } else {
+            clearInterval(timer);
+            return;
         }
-
-
     }
-
-
 }
+
 
 function createQueue(queue) {
 
@@ -79,6 +72,7 @@ function createQueue(queue) {
     removeChildren(queueDiv);
     for (var i = 0; i < queue.length; i++) {
         queMen[i] = document.createElement("div");
+        queMen[i].setAttribute("id", "queueMenber" + i);
         queMen[i].setAttribute("class", "queueMenber");
         queMen[i].setAttribute("style", "height:" + queue[i] + "px;width:" + 1000 / queue.length + "px;top:" + (100 - queue[i]) + "px;");
         queMen[i].setAttribute("onclick", "delNum(this.innerHTML);");
@@ -148,15 +142,8 @@ function bandEvent() {
     $("#random").setAttribute("onclick", "randomFifty();");
 }
 
-function sortArray() {
-    var array = queueSource.sort(compare);
-    createQueue(array);
 
-}
 
-function compare(value1, value2) {
-    return value2 - value1;
-}
 window.onload = function() {
 
     bandEvent();
