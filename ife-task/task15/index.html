@@ -41,6 +41,8 @@
 
     function viewResult() {
         var data = getData();
+        var result = document.getElementById("result");
+        result.innerHTML = "";
         var data_px = data.sort(compare);
         var order = ["第一名：", "第二名：", "第三名：", "第四名：", "第五名：", "第六名：", "第七名："];
         for (var i = 0; i < data_px.length; i++) {
@@ -50,6 +52,7 @@
             para.appendChild(text);
             var textdiv = document.getElementById("result");
             textdiv.appendChild(para);
+
         }
 
         //alert(data_px);
